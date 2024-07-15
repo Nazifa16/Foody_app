@@ -23,7 +23,7 @@ const AdminLogin = () => {
                             <div className=' w-full  flex flex-col  gap-6  '>
                                 <input type='text' className=' bg-admin-input text-admin-text rounded  py-4 pl-10  text-lg font-medium ' placeholder='Username' />
                                 <input className='mb-3  bg-admin-input text-admin-text rounded   py-4 pl-10  text-lg font-medium ' type='password' placeholder='Password' />
-                                <button className='w-full bg-admin-btn text-white  text-2xl  font-medium rounded  py-3  cursor-pointer hover:bg-admin-btn-hover'>sign in</button>
+                                <button className='w-full bg-admin-btn text-white  text-2xl  font-medium rounded  py-3  cursor-pointer hover:bg-admin-btnhover'>sign in</button>
                             </div>
                         </div >
                         {/* picture side */}
