@@ -15,6 +15,7 @@ module.exports = {
         "admin-secondary": "#27283C",
         "admin-btn": "#C035A2",
         "admin-btnhover": "#CD61ED",
+        "admin-btn-shadow": "rgba(39, 174, 96, 0.2)",
         "admin-aside": "#C74FEB",
         "admin-input": "#5A5B70",
         "admin-text": "#C7C7C7",
