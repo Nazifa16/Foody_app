@@ -1,6 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import AdminHeader from "../../shared/components/admin/adminHeader";
+import AdminLayout from "../../shared/components/admin/AdminLayout";
+import DonutChart from "../../shared/components/admin/donutChart";
+import LineChartComponent from "../../shared/components/admin/lineChart";
+import MountainAreaChart from "../../shared/components/admin/mountainChart";
+
+
+// import AdminHeader from "../../shared/components/admin/adminHeader";
+// import AdminSidebar from "../../shared/components/admin/adminSidebar";
 
 const AdminDashboard: NextPage = () => {
   return (
@@ -11,10 +18,30 @@ const AdminDashboard: NextPage = () => {
         <link rel="icon" href="/adminIcon.jpg" />
       </Head>
 
-      <>
-        <AdminHeader />
+      {/* <div className=" bg-gray-700"> */}
+      {/* <AdminHeader />
+        <AdminSidebar /> */}
 
-      </>
+      <AdminLayout>
+        <div className=" gap-6 mt-4 flex flex-col max-h-[720px] scrollbar overflow-y-scroll pr-0 sm:pr-4 px-2">
+          <div className="flex gap-8  flex-wrap  w-full">
+            <DonutChart />
+            <MountainAreaChart />
+          </div>
+          <div className="flex gap-8 flex-wrap  w-full">
+            <LineChartComponent />
+          </div>
+        </div>
+
+
+
+      </AdminLayout>
+
+
+
+
+      {/* </div> */}
+
     </div>
   );
 };

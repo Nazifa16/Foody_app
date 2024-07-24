@@ -12,7 +12,7 @@ const AdminLogin = () => {
     return (
         <>
             <div className='min-h-screen  bg-admin-bg'>
-                <nav className='pt-14 mb-20  pl-8 md:mb-44' >
+                <nav className='pt-14 mb-20  pl-8 md:mb-44'>
                     <Image width={102} height={22} src="/adminFoody.svg" alt='foodyLogo' />
                 </nav>
                 <div className='flex justify-center'>
