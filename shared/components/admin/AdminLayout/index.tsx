@@ -6,9 +6,11 @@ function AdminLayout({ children }: { children: any }) {
     return (
         <div className=' bg-admin-bg min-h-screen px-5'>
             <AdminHeader />
-            <main>
+            <main className='flex gap-7'>
                 <AdminSidebar />
+                {children}
             </main>
+
         </div>
     )
 }
