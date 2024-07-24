@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 function AdminSidebar() {
     const { push, pathname } = useRouter()
-    const [state, setState] = useState<boolean>(false)
+    const [state, setState] = useState<boolean>(true)
 
     function handleclose() {
         setState(prev => !prev)
