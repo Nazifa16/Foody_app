@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import AdminHeader from "../../shared/components/admin/adminHeader";
+import AdminLayout from "../../shared/components/admin/AdminLayout";
+// import AdminHeader from "../../shared/components/admin/adminHeader";
+// import AdminSidebar from "../../shared/components/admin/adminSidebar";
 
 const AdminDashboard: NextPage = () => {
   return (
@@ -11,10 +13,17 @@ const AdminDashboard: NextPage = () => {
         <link rel="icon" href="/adminIcon.jpg" />
       </Head>
 
-      <>
-        <AdminHeader />
+      {/* <div className=" bg-gray-700"> */}
+      {/* <AdminHeader />
+        <AdminSidebar /> */}
 
-      </>
+      <AdminLayout>
+
+      </AdminLayout>
+
+
+
+      {/* </div> */}
     </div>
   );
 };
