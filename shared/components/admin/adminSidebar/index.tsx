@@ -5,11 +5,13 @@ import { useState } from 'react';
 
 function AdminSidebar() {
     const { push, pathname } = useRouter()
-    const [state, setState] = useState<boolean>()
+    const [state, setState] = useState<boolean>(false)
 
     function handleclose() {
         setState(prev => !prev)
     }
+
+    if (!state) return null;
     return (
         state && (
             <div className="fixed inset-0 z-50 flex  bg-opacity-50 sm:bg-transparent sm:relative sm:inset-auto">
