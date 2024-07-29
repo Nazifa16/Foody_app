@@ -11,6 +11,13 @@ function AdminSidebar() {
         setState(prev => !prev)
     }
 
+    const activeStyles = (p: string) => {
+        if (pathname === p) {
+            return "bg-white rounded bg-opacity-10"
+        }
+        return ""
+    }
+
     if (!state) return null;
     return (
         state && (
@@ -25,31 +32,31 @@ function AdminSidebar() {
                                 <h2 className="text-[#F2F2F2] font-medium text-2xl">Foody</h2>
                             </div>
                         </div>
-                        <li className="cursor-pointer flex items-center gap-6 p-3 hover:bg-white hover:rounded hover:bg-opacity-10" onClick={() => { push('/admin'); }}>
+                        <li className={`cursor-pointer flex items-center gap-6 p-3 hover:bg-white hover:rounded hover:bg-opacity-10 ${activeStyles('/admin')}`} onClick={() => { push('/admin'); }}>
                             <Image src="/adminSidebarDashboard.svg" alt="adminSidebarDashboard" width={0} height={0} className="w-4 h-4" />
                             <p className="text-[#FCDDEC] text-base font-medium">Dashboard</p>
                         </li>
-                        <li className="cursor-pointer flex items-center gap-6 p-3 hover:bg-white hover:rounded hover:bg-opacity-10" onClick={() => { push('product'); }}>
+                        <li className={`cursor-pointer flex items-center gap-6 p-3 hover:bg-white hover:rounded hover:bg-opacity-10 ${activeStyles('/admin/product')}`} onClick={() => { push('/admin/product'); }}>
                             <Image src="/adminSidebarProduct.svg" alt="adminSidebarProduct" width={0} height={0} className="w-4 h-4" />
                             <p className="text-admin-gray6 text-base font-medium">Product</p>
                         </li>
-                        <li className="cursor-pointer flex items-center gap-6 p-3 hover:bg-white hover:rounded hover:bg-opacity-10" onClick={() => { push('restaurant'); }}>
+                        <li className={`cursor-pointer flex items-center gap-6 p-3 hover:bg-white hover:rounded hover:bg-opacity-10 ${activeStyles('/admin/restaurants')}`} onClick={() => { push('/admin/restaurants'); }}>
                             <Image src="/adminSidebarRestaurant.svg" alt="adminSidebarRestaurant" width={0} height={0} className="w-4 h-4" />
-                            <p className="text-admin-gray6 text-base font-medium">Restaurant</p>
+                            <p className="text-admin-gray6 text-base font-medium">Restaurants</p>
                         </li>
-                        <li className="cursor-pointer flex items-center gap-6 p-3 hover:bg-white hover:rounded hover:bg-opacity-10" onClick={() => { push('category'); }}>
+                        <li className={`cursor-pointer flex items-center gap-6 p-3 hover:bg-white hover:rounded hover:bg-opacity-10 ${activeStyles('/admin/category')}`} onClick={() => { push('/admin/category'); }}>
                             <Image src="/adminSidebarCategory.svg" alt="adminSidebarCategory" width={0} height={0} className="w-4 h-4" />
                             <p className="text-admin-gray6 text-base font-medium">Category</p>
                         </li>
-                        <li className="cursor-pointer flex items-center gap-6 p-3 hover:bg-white hover:rounded hover:bg-opacity-10" onClick={() => { push('orders'); }}>
+                        <li className={`cursor-pointer flex items-center gap-6 p-3 hover:bg-white hover:rounded hover:bg-opacity-10 ${activeStyles('/admin/orders')}`} onClick={() => { push('/admin/orders'); }}>
                             <Image src="/adminSidebarOrders.svg" alt="adminSidebarOrders" width={0} height={0} className="w-4 h-4" />
                             <p className="text-admin-gray6 text-base font-medium">Orders</p>
                         </li>
-                        <li className="cursor-pointer flex items-center gap-6 p-3 hover:bg-white hover:rounded hover:bg-opacity-10" onClick={() => { push('offer'); }}>
+                        <li className={`cursor-pointer flex items-center gap-6 p-3 hover:bg-white hover:rounded hover:bg-opacity-10 ${activeStyles('/admin/offer')}`} onClick={() => { push('/admin/offer'); }}>
                             <Image src="/adminSidebarOffer.svg" alt="adminSidebarOffer" width={0} height={0} className="w-4 h-4" />
                             <p className="text-admin-gray6 text-base font-medium">Offer</p>
                         </li>
-                        <li className="cursor-pointer flex items-center gap-6 p-3 hover:bg-white hover:rounded hover:bg-opacity-10" onClick={() => { push('logout'); }}>
+                        <li className={`cursor-pointer flex items-center gap-6 p-3 hover:bg-white hover:rounded hover:bg-opacity-10 ${activeStyles('admin/login')}`} onClick={() => { push('/admin/login '); }}>
                             <Image src="/adminSidebarLogout.svg" alt="adminSidebarLogout" width={0} height={0} className="w-4 h-4" />
                             <p className="text-admin-gray6 text-base font-medium">Log out</p>
                         </li>
