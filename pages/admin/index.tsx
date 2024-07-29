@@ -1,5 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useState } from "react";
+import AdminAddProducttModal from "../../shared/components/admin/adminAddProduct";
+
 import AdminLayout from "../../shared/components/admin/AdminLayout";
 import DonutChart from "../../shared/components/admin/donutChart";
 import LineChartComponent from "../../shared/components/admin/lineChart";
@@ -10,6 +13,10 @@ import MountainAreaChart from "../../shared/components/admin/mountainChart";
 // import AdminSidebar from "../../shared/components/admin/adminSidebar";
 
 const AdminDashboard: NextPage = () => {
+  const [showProductModal, setShowProductModal] = useState<boolean>(true)
+  function showHideModalProduct() {
+    setShowProductModal((prev) => !prev)
+  }
   return (
     <div>
       <Head>
@@ -22,16 +29,27 @@ const AdminDashboard: NextPage = () => {
       {/* <AdminHeader />
         <AdminSidebar /> */}
 
-      <AdminLayout>
-        <div className=" gap-6 mt-4 flex flex-col max-h-[720px] scrollbar overflow-y-scroll pr-0 sm:pr-4 px-2">
-          <div className="flex gap-8  flex-wrap  w-full">
-            <DonutChart />
-            <MountainAreaChart />
+      <AdminLayout showMod={showHideModalProduct}>
+        <div className="w-full">
+          <div className="my-6">
+            <AdminAddProducttModal onClose={showHideModalProduct}
+              show={showProductModal} />
           </div>
-          <div className="flex gap-8 flex-wrap  w-full">
-            <LineChartComponent />
+
+          <div className=" gap-6 mt-4 flex flex-col max-h-[720px] scrollbar overflow-y-scroll pr-0 sm:pr-4 px-2">
+            <div className="flex gap-8  flex-wrap  w-full">
+              <DonutChart />
+              <MountainAreaChart />
+            </div>
+            <div className="flex gap-8 flex-wrap  w-full">
+              <LineChartComponent />
+            </div>
           </div>
+
+
+
         </div>
+
 
 
 

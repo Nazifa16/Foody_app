@@ -21,6 +21,13 @@ module.exports = {
         "admin-text": "#C7C7C7",
 
         "admin-gray6": "#F2F2F2",
+
+        "admin-modal-framebg": "#43445A",
+        "admin-modal-upload": "#EC5CF8",
+
+        "admin-close-modal": "#C74FEB",
+        "admin-purpl-modal-btn": "#C035A2",
+        "admin-cancel-btn": "#43445A",
       },
     },
   },

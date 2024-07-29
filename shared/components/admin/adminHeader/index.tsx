@@ -3,8 +3,10 @@ import React from 'react'
 import Languages from '../../common/languages'
 import { AdminButton } from '../adminButton'
 
-
-const AdminHeader = () => {
+interface props {
+    onClick?: () => void
+}
+const AdminHeader = ({ onClick }: props) => {
     return (
         <nav className='flex justify-between  items-center rounded-md px-5  py-11 sm:m-0 sm:mb-4 bg-admin-secondary sm:p-5 '>
             <div className='flex items-center gap-2'>
@@ -15,7 +17,7 @@ const AdminHeader = () => {
             </div>
 
             <div className='flex gap-3 sm:gap-4'>
-                <AdminButton className='flex justify-center sm:` bg-admin-btn text-white text-sm font-medium px-3  py-2 rounded-full shadow-sm shadow-admin-btn-shadow hover:bg-admin-btnhover' text=' + ' children={<span className="hidden  md:inline-block"> add product </span>} />
+                <AdminButton className='flex justify-center sm:` bg-admin-btn text-white text-sm font-medium px-3  py-2 rounded-full shadow-sm shadow-admin-btn-shadow hover:bg-admin-btnhover' text=' + ' children={<span className="hidden  md:inline-block"> add product </span>} onClick={onClick} />
                 <Languages />
                 <button className=' cursor-pointer hidden sm:inline-block'>
                     <Image src="/adminUser.svg" width={0} height={0} alt='adminUser' className='w-12 h-10 rounded-full ' />
