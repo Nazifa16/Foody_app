@@ -28,6 +28,12 @@ module.exports = {
         "admin-close-modal": "#C74FEB",
         "admin-purpl-modal-btn": "#C035A2",
         "admin-cancel-btn": "#43445A",
+
+        "admin-white-color": "#FFFFFF",
+        "admin-black": "#1E1E30",
+        "admin-gray3": "#828282",
+        "admin-delete": "#EB5757",
+        "admin-edit": "#00B2A9",
       },
     },
   },
