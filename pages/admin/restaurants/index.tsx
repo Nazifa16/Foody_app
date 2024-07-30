@@ -8,7 +8,7 @@ import AdminSecondary from '../../../shared/components/admin/adminSecondary'
 
 
 function AdminRestaurants() {
-    const { isOpen, onOpen, onClose } = useDisclosure()
+
 
 
     const [showProductModal, setShowProductModal] = useState<boolean>(true)
