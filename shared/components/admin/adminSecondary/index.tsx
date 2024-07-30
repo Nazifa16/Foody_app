@@ -12,7 +12,7 @@ interface AdminSecondaryT {
 }
 function AdminSecondary({ secondaryText, getText, showButton, showDropdown, onClick, secondaryButtonText }: AdminSecondaryT) {
     return (
-        <div className='bg-admin-secondary rounded-sm sm:rounded-2xl flex flex-col sm:flex-row justify-between items-center p-5'>
+        <div className='bg-admin-secondary rounded-sm sm:rounded-2xl flex flex-col sm:flex-row justify-between items-center p-5 sm:mt-2 mt-6'>
             <div className='text-admin-text text-xl font-medium'>
                 {secondaryText}
             </div>
