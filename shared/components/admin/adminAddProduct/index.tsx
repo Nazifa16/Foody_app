@@ -57,14 +57,14 @@ function AdminAddProducttModal({ show = true, onClose, text }: AdminAddProducttM
                         <div className='bg-admin-modal-framebg w-full lg:w-2/3 pt-5 pl-5 pr-7 rounded-2xl max-h-[390px] overflow-y-scroll scrollbar'>
                             <div>
 
-                                <AdminInput p='name' placeholder='Mc Donald’s' classNameDiv='flex flex-col gap-2' />
-                                <AdminTextarea p='Description' classNameDiv='mt-6' placeholder="Fast Food , Drink, Ice Cream, Sea Food" />
+                                <AdminInput p='name' placeholder='Burger King' classNameDiv='flex flex-col gap-2' />
+                                <AdminTextarea p='Description' classNameDiv='mt-6' placeholder="Drink, Fast food ..." />
 
                                 <AdminInput
                                     type="number"
                                     p='Price $'
                                     classNameDiv="flex flex-col gap-2 mt-8"
-                                    placeholder='6'
+                                    placeholder=' 12 '
 
                                 />
                                 <AdminDropdown

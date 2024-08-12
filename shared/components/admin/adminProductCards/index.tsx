@@ -2,7 +2,11 @@ import Image from 'next/image'
 import React from 'react'
 import { MdDeleteForever, MdOutlineEdit } from 'react-icons/md'
 
-function AdminProductCard() {
+interface AdminProductCardT {
+    handleDeleteModal?: () => void
+}
+
+function AdminProductCard({ handleDeleteModal }: AdminProductCardT) {
     return (
         <div className=' bg-admin-white-color w-48 max-h-[273px] pb-4 rounded-lg sm:mt-0 mt-4 '>
             {/* image */}
@@ -24,7 +28,7 @@ function AdminProductCard() {
                             <MdOutlineEdit className="fill-admin-edit w-6 h-6 hover:fill-green-600  hover:scale-95 transition-all duration-500" />
                         </span>
                     </button>
-                    <button>
+                    <button onClick={handleDeleteModal}>
                         <span>
                             <MdDeleteForever className="fill-admin-delete w-6 h-6    hover:fill-pink-700  hover:scale-95 transition-all duration-500 " />
 
