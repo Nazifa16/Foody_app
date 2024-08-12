@@ -34,6 +34,8 @@ module.exports = {
         "admin-gray3": "#828282",
         "admin-delete": "#EB5757",
         "admin-edit": "#00B2A9",
+
+        "admin-table-border":"#C9CFDA"
       },
     },
   },

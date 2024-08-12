@@ -5,6 +5,7 @@ import AdminAddRestaurantModal from '../../../shared/components/admin/adminAddRe
 import AdminLayout from '../../../shared/components/admin/AdminLayout'
 import AdminRestaurantCards from '../../../shared/components/admin/adminRestaurantCards'
 import AdminSecondary from '../../../shared/components/admin/adminSecondary'
+import AdminSureUnsureModal from '../../../shared/components/admin/adminSureUnsureModal'
 
 
 function AdminRestaurants() {
@@ -19,6 +20,11 @@ function AdminRestaurants() {
     function showHideModalRestaurant() {
         setshowRestaurantModal((prev) => !prev)
     }
+
+    // modal delete
+    function handleDeleteAlert() {
+        AdminSureUnsureModal()
+    }
     return (
         <AdminLayout showMod={showHideModalProduct}>
             <div className='w-full'>
@@ -30,7 +36,7 @@ function AdminRestaurants() {
 
 
                 <div className='flex flex-wrap justify-center overflow-scroll max-h-[390px] sm:w-auto m-2  gap-x-7 gap-10 sm:m-5 '>
-                    <AdminRestaurantCards />
+                    <AdminRestaurantCards handleDeleteModal={handleDeleteAlert} />
                     <AdminRestaurantCards />
                     <AdminRestaurantCards />
                     <AdminRestaurantCards />
