@@ -8,11 +8,11 @@ import LineChartComponent from "../../shared/components/admin/lineChart";
 import MountainAreaChart from "../../shared/components/admin/mountainChart";
 
 
-
-// import AdminHeader from "../../shared/components/admin/adminHeader";
-// import AdminSidebar from "../../shared/components/admin/adminSidebar";
-
 const AdminDashboard: NextPage = () => {
+
+
+
+
   const [showProductModal, setShowProductModal] = useState<boolean>(true)
   function showHideModalProduct() {
     setShowProductModal((prev) => !prev)
@@ -25,11 +25,9 @@ const AdminDashboard: NextPage = () => {
         <link rel="icon" href="/adminIcon.jpg" />
       </Head>
 
-      {/* <div className=" bg-gray-700"> */}
-      {/* <AdminHeader />
-        <AdminSidebar /> */}
 
-      <AdminLayout showMod={showHideModalProduct}>
+
+      <AdminLayout showMod={showHideModalProduct} >
         <div className="w-full">
           <div className="my-6">
             <AdminAddProducttModal onClose={showHideModalProduct}
@@ -46,19 +44,9 @@ const AdminDashboard: NextPage = () => {
             </div>
           </div>
 
-
-
         </div>
 
-
-
-
       </AdminLayout>
-
-
-
-
-      {/* </div> */}
 
     </div>
   );

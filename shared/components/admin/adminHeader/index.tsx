@@ -3,14 +3,15 @@ import React from 'react'
 import Languages from '../../common/languages'
 import { AdminButton } from '../adminButton'
 
-interface props {
+interface adminHeaderT {
     onClick?: () => void
+    onClickSidebar: () => void
 }
-const AdminHeader = ({ onClick }: props) => {
+const AdminHeader = ({ onClick, onClickSidebar }: adminHeaderT) => {
     return (
         <nav className='flex justify-between  items-center rounded-md px-5  py-11 sm:m-0 sm:mb-4 bg-admin-secondary sm:p-5 '>
             <div className='flex items-center gap-2'>
-                <button className='sm:hidden block mr-1'>
+                <button className='sm:hidden block mr-1' onClick={onClickSidebar}>
                     <Image src="/adminHamburger.svg" alt='adminHamburger' width={0} height={0} className='w-8 h-6' />
                 </button>
                 <Image src="/adminFoody.svg" alt='adminFoody' width={0} height={0} className='w-24 h-7' />
