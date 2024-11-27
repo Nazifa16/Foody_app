@@ -1,40 +1,37 @@
-import React, { useRef } from 'react'
+import React, { useRef, forwardRef } from 'react';
 
-interface adminInputT {
-    p?: string
-    type?: string
-    classNameDiv?: string
-    placeholder: string
-    getText?: (text: string) => void
-
+interface AdminInputT {
+    p?: string;
+    type?: string;
+    classNameDiv?: string;
+    placeholder: string;
+    getText?: (text: string) => void;
 }
 
-function AdminInput({
-    p = 'Name',
-    type = 'text',
-    classNameDiv,
-    placeholder,
-    getText,
-}: adminInputT) {
-    const ref = useRef<HTMLInputElement>(null)
-
+const AdminInput = forwardRef<HTMLInputElement, AdminInputT>(function AdminInput(
+    { p = 'Name', type = 'text', classNameDiv, placeholder, getText },
+    ref
+) {
     const handleBlur = () => {
-        if (ref.current && getText) {
-            getText(ref.current.value)
+        if (ref && getText && ref instanceof HTMLInputElement) {
+            console.log(ref.value);
+
+            getText(ref.value);
         }
-    }
+    };
+
     return (
         <div className={classNameDiv}>
-            <p className='font-medium text-admin-text text-base font-display'>{p}</p>
-            <input placeholder={placeholder}
+            <p className="font-medium text-admin-text text-base font-display">{p}</p>
+            <input
+                placeholder={placeholder}
                 className="rounded-2xl font-medium text-base bg-admin-input text-admin-modal-placeholder pl-5 py-3 capitalize font-display"
                 type={type}
                 ref={ref}
                 onBlur={handleBlur}
             />
         </div>
+    );
+});
 
-    )
-}
-
-export default AdminInput
+export default AdminInput;
