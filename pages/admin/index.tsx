@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import AdminAddProducttModal from "../../shared/components/admin/adminAddProduct";
 import AdminLayout from "../../shared/components/admin/AdminLayout";
 import DonutChart from "../../shared/components/admin/donutChart";
@@ -10,13 +10,11 @@ import MountainAreaChart from "../../shared/components/admin/mountainChart";
 
 const AdminDashboard: NextPage = () => {
 
-
-
-
   const [showProductModal, setShowProductModal] = useState<boolean>(true)
   function showHideModalProduct() {
     setShowProductModal((prev) => !prev)
   }
+
   return (
     <div>
       <Head>

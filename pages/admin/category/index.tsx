@@ -8,6 +8,7 @@ import AdminSecondary from '../../../shared/components/admin/adminSecondary'
 import AdminSureUnsureModal from '../../../shared/components/admin/adminSureUnsureModal'
 function AdminCategories() {
 
+
     const [showProductModal, setShowProductModal] = useState<boolean>(true)
     function showHideModalProduct() {
         setShowProductModal((prev) => !prev)
@@ -17,6 +18,7 @@ function AdminCategories() {
     function showHideModalCategory() {
         setShowCategoryModal((prev) => !prev)
     }
+
 
     // ALERT SWEET
     function handleDeleteAlert() {
