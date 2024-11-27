@@ -5,12 +5,12 @@ import { AddIcon } from '@chakra-ui/icons'
 interface AdminSecondaryT {
     secondaryText?: string
     secondaryButtonText?: string
-    getText?: (text: string) => void
+    getData?: (text: string) => void
     showButton?: boolean
     showDropdown?: boolean
     onClick?: () => void
 }
-function AdminSecondary({ secondaryText, getText, showButton, showDropdown, onClick, secondaryButtonText }: AdminSecondaryT) {
+function AdminSecondary({ secondaryText, getData, showButton, showDropdown, onClick, secondaryButtonText }: AdminSecondaryT) {
     return (
         <div className='bg-admin-secondary rounded-sm sm:rounded-2xl flex flex-col sm:flex-row justify-between items-center p-5 sm:mt-2 mt-6'>
             <div className='text-admin-text text-xl font-medium'>
@@ -20,7 +20,7 @@ function AdminSecondary({ secondaryText, getText, showButton, showDropdown, onCl
                 {showDropdown &&
                     <AdminDropdown classNameDiv='flex justify-center w-[270px] sm:w-52 gap-3 me-3 sm:me-0'
                         classNameSelect='w-[270px] rounded-sm sm:rounded-2xl  py-2   px-2   bg-admin-input  rounded-2xl font-medium text-base  text-admin-secondary-heading    w-[170px] overflow-x-auto'
-                        getText={getText}
+                        getData={getData}
                     />
                 }
                 {showButton &&
